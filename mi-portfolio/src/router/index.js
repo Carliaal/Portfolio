@@ -1,4 +1,8 @@
+// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
+
+// Base URL para GitHub Pages
+const BASE_URL = '/Portfolio/'
 
 const routes = [
   {
@@ -14,14 +18,11 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (to.hash) {
-      return {
-        el: to.hash,
-        behavior: 'smooth'
-      }
+      return { el: to.hash, behavior: 'smooth' }
     }
     if (savedPosition) {
       return savedPosition
@@ -31,4 +32,3 @@ const router = createRouter({
 })
 
 export default router
-

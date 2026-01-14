@@ -5,6 +5,7 @@ import { fileURLToPath, URL } from 'url' // ← necesario para resolver rutas
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Portfolio/',
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: {
