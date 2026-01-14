@@ -1,0 +1,239 @@
+<script setup>
+import ProjectCard from '@/components/ProjectCard.vue';
+import Navbar from '@/components/Navbar.vue';
+import SkillCard from '@/components/SkillCard.vue';
+const projects = [
+  { id: 1, title: 'Lumino', description: 'Proyecto DAW, plataforma de educación', tags: ['Django', 'Boodstrap',], codeUrl: 'https://lumino.jonaykb.com/es/', gitCode: 'https://github.com/JonayKB/Lumino.git', image: '/Voice_Creative_Writing_Presentation.webp' },
+  { id: 2, title: 'Próximamente', description: 'Trabajando en ello...', tags: ['python', 'boostrap'], codeUrl: '', gitCode: '', image: '/cd584206-3ab5-4d20-af86-07688163cbd3.png' },
+  { id: 3, title: 'Próximamente', description: 'Trabajando en ello...', tags: ['python', 'boostrap'], codeUrl: '', gitCode: '', image: '/cd584206-3ab5-4d20-af86-07688163cbd3.png' }
+]
+
+const skills = [
+  { name: 'Vue', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg' },
+  { name: 'Tailwind', icon: 'https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg' },
+  { name: 'HTML', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg' },
+  { name: 'CSS', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg' },
+  { name: 'Python', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg' },
+  { name: 'Django', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg' },
+  {
+    name: 'Bootstrap', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-original.svg'
+  },
+  {
+    name: 'TypeScript',
+    icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'
+  },
+  {
+    name: 'JavaScript',
+    icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg'
+  }
+];
+</script>
+
+<template>
+  <div class="min-h-screen bg-[#050005] text-white selection:bg-pink-500/30">
+    <Navbar />
+
+    <header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050005]">
+      <div
+        class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,77,166,0.15)_0%,_rgba(5,0,5,1)_70%)]">
+      </div>
+      <div class="absolute top-20 right-[10%] w-[400px] h-[400px] bg-pink-600/20 blur-[120px] rounded-full z-0"></div>
+      <div class="absolute bottom-10 left-[5%] w-[300px] h-[300px] bg-purple-600/10 blur-[100px] rounded-full z-0">
+      </div>
+
+      <div class="max-w-[1400px] mx-auto px-12 flex flex-col md:flex-row items-center relative z-10 text-white w-full">
+        <div class="flex-1 text-center md:text-left">
+          <span class="text-pink-400 font-medium tracking-tighter text-xl">Hola, soy</span>
+          <h1
+            class="text-8xl font-black bg-gradient-to-b from-white to-pink-200 bg-clip-text text-transparent leading-none mt-2">
+            Carla
+          </h1>
+          <p class="mt-6 text-gray-400 text-lg font-light tracking-wide">
+            Frontend Developer · <span class="text-pink-500 font-normal">Vue</span> · <span
+              class="text-pink-500 font-normal">Tailwind</span>
+          </p>
+
+          <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
+            <a href="https://github.com/carliaal"
+              class="bg-gradient-to-r from-pink-500 to-pink-600 hover:scale-105 transition-transform text-white px-8 py-3 rounded-2xl font-bold shadow-[0_0_20px_rgba(236,72,153,0.4)]">
+              Ver proyectos
+            </a>
+            <router-link to="/contacto"
+              class="bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-3 rounded-2xl font-bold transition-all backdrop-blur-sm">
+              Redes Sociales
+            </router-link>
+          </div>
+        </div>
+
+
+        <div class="flex-1 mt-12 md:mt-0 flex justify-center relative">
+          <div class="absolute inset-0 bg-pink-500/20 blur-[80px] rounded-full scale-75"></div>
+          <img src="@/assets/image_header.png" alt="Carla"
+            class="w-full max-w-[420px] relative z-10 [mask-image:linear-gradient(to_bottom,black_85%,transparent_100%)]" />
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none"
+          class="relative block w-full h-[80px] transform rotate-180">
+          <path
+            d="M0,0V27.35A600.21,600.21,0,0,0,321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0Z"
+            fill="#050005"></path>
+
+          <path
+            d="M0,27.35A600.21,600.21,0,0,0,321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3"
+            fill="none" stroke="rgba(236,72,153,0.4)" stroke-width="2" stroke-linecap="round"></path>
+        </svg>
+
+        <div
+          class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-pink-500/30 to-transparent blur-md">
+        </div>
+      </div>
+    </header>
+
+    <div class="max-w-[1400px] mx-auto px-12">
+      <section id="sobre-mi" class="mb-32 relative z-10">
+        <div class="flex items-center gap-3 mb-10">
+          <div class="text-pink-500 text-2xl transform hover:rotate-12 transition-transform cursor-default"><img
+              class="size-10" src="/icons8-gato-64.png" alt=""></div>
+          <h2 class="text-3xl font-bold tracking-tight text-white flex items-center gap-2">
+            Sobre mí
+            <span class="text-pink-500 text-xl transform rotate-12">♥</span>
+          </h2>
+        </div>
+
+        <div class="relative flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
+          <div class="max-w-3xl flex-1">
+            <p class="text-[1.5rem] text-gray-400 leading-relaxed font-light">
+              <span class="text-white font-medium">Desarrolladora</span> con alma
+              <span class="text-white font-bold">creativa</span> y devoción por los
+              <span class="text-pink-500">gatos</span>.
+              Mi mundo se divide entre el <span class="text-gray-200">dibujo</span>, los
+              <span class="text-gray-200">videojuegos</span> y el código.
+              Aunque navego con soltura en el <span class="text-gray-300">Backend</span>, mi verdadera pasión es el
+              <span class="text-white font-bold italic">Frontend</span>:
+              donce convierto ideas en <span class="text-pink-400">interfaces vibrantes</span> y con estilo.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-x-10 gap-y-4 text-sm text-gray-400 font-medium">
+              <div class="flex items-center gap-2 group cursor-default">
+                <span class="text-pink-500 text-lg group-hover:scale-110 transition-transform"></span>
+                Tenerife, Islas Canarias
+              </div>
+              <div class="flex items-center gap-2 group cursor-default">
+                <span class="text-pink-500 text-lg group-hover:scale-110 transition-transform">🎓</span>
+                DAW
+              </div>
+              <div class="flex items-center gap-2 group cursor-default">
+                <span class="text-pink-500 text-lg group-hover:scale-110 transition-transform">📊</span>
+                Inglés B2
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1 flex justify-center relative pt-24">
+            <div class="relative -mt-24">
+              <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full opacity-60 mix-blend-screen pointer-events-none transition-all duration-700 group-hover:scale-110"
+                style="background: radial-gradient(circle, rgba(236, 72, 153, 0.6) 0%, rgba(236, 72, 153, 0) 70%); filter: blur(40px);">
+              </div>
+
+              <img src="@/assets/image_sobremi.png" alt="Michi"
+                class="w-64 h-auto relative z-10 drop-shadow-2xl animate-bounce" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="habilidades" class="mb-32 relative z-10">
+        <div class="flex flex-col lg:flex-row gap-16">
+
+          <div class="flex-[2]">
+            <div class="flex items-center gap-3 mb-10">
+              <h2 class="text-3xl font-bold tracking-tight text-white">Habilidades</h2>
+              <span class="text-pink-500 text-2xl transform hover:rotate-12 transition-transform cursor-default"><img
+                  src="/icons8-estrellas-50.png" alt=""></span>
+            </div>
+
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 w-full">
+              <SkillCard v-for="skill in skills" :key="skill.name" :name="skill.name" :icon-url="skill.icon" />
+            </div>
+          </div>
+
+          <div class="flex-1 min-w-[300px] ">
+            <div
+              class="relative group p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/[0.07] transition-all duration-500 overflow-hidden hover:border-pink-500/50 hover:bg-pink-500/5 
+              shadow-[0_0_25px_rgba(236,72,153,0.2)] hover:shadow-[0_0_25px_rgba(235,148,187)] aspect-square rounded-2xl">
+              <div class="flex items-center gap-3 mb-5">
+                <h2 class="text-3xl font-bold tracking-tight text-white">Experiencia</h2>
+                <span class="text-pink-500 text-2xl"><a
+                    class="text-pink-500 text-2xl transform hover:rotate-12 transition-transform cursor-default size-10"
+                    href="/icons8-experiencia-50.png"></a></span>
+              </div>
+              <div
+                class="absolute -top-12 -right-12 w-40 h-40 bg-pink-500/10 blur-[50px] rounded-full group-hover:bg-pink-500/20 transition-colors duration-700">
+              </div>
+              <div class="relative z-10">
+                <h3 class="text-pink-500 font-bold text-xl tracking-tight">Prácticas</h3>
+                <p class="text-white text-lg font-medium">GTarchipielago</p>
+                <div class="flex items-center gap-3 mt-6">
+                  <span
+                    class="px-4 py-1.5 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-bold">2025</span>
+                  <span class="text-gray-600">•</span>
+                  <span class="text-gray-400 text-sm">Tenerife, España</span>
+                </div>
+                <p class="mt-6 text-gray-400 text-md leading-relaxed font-light">
+                  Centrada en la gestión de redes informaticas y telefonía, configuraciones de routers, ip y creación de
+                  una mini página web
+                </p>
+              </div>
+              <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="assets/cv.pdf" download="MiCV.pdf"
+                  class="bg-gradient-to-r from-pink-500 to-pink-600 hover:scale-105 transition-transform text-white px-8 py-3 rounded-2xl font-bold shadow-[0_0_20px_rgba(236,72,153,0.4)]">
+                  Descargar CV
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section id="proyectos" class="mb-32 relative z-10">
+        <div class="flex items-center gap-3 mb-10">
+          <h2 class="text-3xl font-bold tracking-tight text-white">Proyectos</h2>
+          <span class="text-pink-500 text-2xl transform hover:rotate-12 transition-transform cursor-default"><img
+              class="size-7" src="/icons8-cohete-50.png" alt="cohete"></span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <ProjectCard v-for="project in projects" :key="project.id" :title="project.title"
+            :description="project.description" :code-url="project.codeUrl" :tags="project.tags"
+            :gitCode="project.gitCode" :image="project.image" />
+        </div>
+      </section>
+
+      <div class="flex items-center gap-3 mb-10">
+        <h2 class="text-3xl font-bold tracking-tight text-white">Contacto</h2>
+        <span class="text-pink-500 text-2xl transform hover:rotate-12 transition-transform cursor-default size-10"><img
+            src="/icons8-teléfono-50.png" alt=""></span>
+      </div>
+      <section id="contacto" class="mb-16">
+        <div class="mt-6 rounded-xl border border-white/10 bg-white/5 p-6 hover:border-pink-500/50 hover:bg-pink-500/5 
+              shadow-[0_0_25px_rgba(236,72,153,0.2)] hover:shadow-[0_0_25px_rgba(235,148,187)]">
+          <p class="text-white/70">¿Te interesa contactar conmigo?</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-4">
+            <a href="mailto:carlagarciapachecotf@gmail.com"
+              class="bg-gradient-to-r from-pink-500 to-pink-600 hover:scale-105 transition-transform text-white px-8 py-3 rounded-2xl font-bold shadow-[0_0_20px_rgba(236,72,153,0.4)]">Enviar
+              email</a>
+            <a href="https://github.com/Carliaal"
+              class="bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-3 rounded-2xl font-bold transition-all backdrop-blur-sm">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-sm text-white/50 border-t border-white/5 pt-8 pb-8">
+        © 2026 — Carla
+      </footer>
+    </div>
+  </div>
+</template>
